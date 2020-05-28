@@ -7,15 +7,12 @@ type AccordionType = {
 
 export function Accordion(props: AccordionType) {
     const {title, collapsed} = props;
-    return collapsed ?  <div>
-                            <AccordionTitle title={title}/>
-                            <AccordionBody/>
-                        </div> :
-                        <div>
-                            <AccordionTitle title={title}/>
-                        </div>
-
+    return <div>
+        <AccordionTitle title={title}/>
+        {!collapsed && <AccordionBody/>}
+    </div>
 }
+
 type AccordionTitleType = {
     title: string
 }
