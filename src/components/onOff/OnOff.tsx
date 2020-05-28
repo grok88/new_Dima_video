@@ -9,13 +9,13 @@ const OnOff = (props:OnOffPropsType) => {
 
     return (
         <div className={style.onOffBlock}>
-            <div className={onOff ? `${style.rect} ${style.on}` : `${style.rect}`}>
+            <div className={`${style.rect} ${onOff && style.on}`}>
                 On
             </div>
-            <div className={onOff ? `${style.rect}` : `${style.rect} ${style.off}`}>
+            <div className={`${style.rect} ${!onOff && style.off}`}>
                 Off
             </div>
-            <div className={onOff ? style.circle + " " + style.on : style.circle + " " + style.off }>
+            <div className={`${style.circle} ${onOff ? style.on : style.off}`}>
 
             </div>
         </div>
