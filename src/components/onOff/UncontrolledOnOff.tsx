@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-const UncontrolledOnOff = () => {
-    let [onOff, setOnOff] = useState<boolean>(false);
+type UncontrolledOnOffType = {
+    on?: boolean;
+    onchange?: () => void
+}
+
+const UncontrolledOnOff = (props: UncontrolledOnOffType) => {
+    let [onOff, setOnOff] = useState<boolean>(props.on ? props.on : false);
 
     const block = {
         width: '200px',
@@ -30,19 +35,21 @@ const UncontrolledOnOff = () => {
         border: '1px solid',
         borderRadius: '50%',
         marginLeft: '10px',
-        backgroundColor:onOff ? 'green' : 'red'
+        backgroundColor: onOff ? 'green' : 'red'
     }
 
 
     return (
         <div style={block}>
-            <div style={onStyle}  onClick={() => {
+            <div style={onStyle} onClick={() => {
                 setOnOff(true);
+                props.onchange&&props.onchange();
             }}>
                 On
             </div>
             <div style={offStyle} onClick={() => {
                 setOnOff(false);
+                props.onchange&&props.onchange();
             }}>
                 Off
             </div>
