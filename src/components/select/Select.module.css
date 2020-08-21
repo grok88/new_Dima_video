@@ -1,0 +1,19 @@
+.selectBlock{
+    width: 200px;
+    outline: 1px solid red;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    outline: 1px solid red;
+    text-align: center;
+}
+.item  {
+    padding: 5px;
+    outline: 1px solid red;
+    text-align: center;
+}
+.item:hover{
+    background-color: azure;
+}
