@@ -1,19 +1,28 @@
-.selectBlock{
-    width: 200px;
+.selectBlock .title{
+    display: inline-block;
+    border:1px solid black;
+    min-height: 20px;
+    min-width: 40px;
+}
+
+.items{
+    position: absolute;
+    padding: 10px;
     outline: 1px solid red;
 }
 
-.title{
-    font-size: 24px;
-    font-weight: bold;
-    outline: 1px solid red;
-    text-align: center;
-}
+
 .item  {
     padding: 5px;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     text-align: center;
 }
 .item:hover{
-    background-color: azure;
+    background-color: blue;
+    color:white;
+}
+
+.item.selected {
+    background-color: blue;
+    color:white;
 }
