@@ -21,8 +21,13 @@ function App() {
             <b>controlled Rating</b>
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <UncontrolledAccordion title={'UltraMenu'}/>
-            <Accordion title={'menu'} collapsed={accordionCollapsed} onClick ={setAccordionCollapsed}/>
+            <UncontrolledAccordion title={'UltraMenu -UncontrolledAccordion'}/>
+            <Accordion title={'menu'} collapsed={accordionCollapsed} onClick ={setAccordionCollapsed} items={[
+                {title:"Alex", value:1},
+                {title:"Gor", value:2},
+                {title:"Gora", value:3},
+                {title:"Anyfriy", value:4},
+            ]} onItemClick={() => console.log('click')}/>
 
             <b>UncontrolledRating</b>
             <UncontrolledRating/>

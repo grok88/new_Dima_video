@@ -57,13 +57,6 @@ export const Select = (props: SelectPropsType) => {
     }
     return (
         <>
-            <select name="" id="">
-                <option value="1">Alex</option>
-                <option value="2">Gor</option>
-                <option value="3">Jora</option>
-                <option value="4">Anyfriy</option>
-            </select>
-
             <div className={styles.selectBlock} tabIndex={0} onKeyUp={onKeyUp}>
                 <span className={styles.title} onClick={toggleItems}>{title}</span>
                 {

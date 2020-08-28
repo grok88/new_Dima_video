@@ -43,9 +43,7 @@ type AccordionBodyPropsType = {
 function AccordionBody(props: AccordionBodyPropsType) {
     return (
         <ul>
-            {
-                props.items.map((el, i) => <li key={i} onClick={() => props.onItemClick(el.value)}>{el.title} </li>)
-            }
+            {props.items.map((el, i) => <li key={i} onClick={() => props.onItemClick(el.value)}>{el.title} </li>)}
         </ul>
     );
 }
