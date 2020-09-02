@@ -7,7 +7,7 @@ type PropsType = {
     onClick: (value: boolean) => void;
 }
 
-const OnOff = (props: PropsType) => {
+const OnOff = React.memo((props: PropsType) => {
 
     const block = {
         width: '200px',
@@ -56,5 +56,5 @@ const OnOff = (props: PropsType) => {
             </div>
         </div>
     );
-}
+});
 export default OnOff;

@@ -18,11 +18,12 @@ test('collapsed should be false',() => {
     });
     expect(endState.collapsed).toBe(false);
 });
-test(' throw Error from \'FAKE\' action',() => {
-    const startState:StateType = {
-        collapsed:true
-    };
-    expect(()=>{
-        reducer(startState, {type:'FAKE'})
-    }).toThrowError();
-});
+
+// test(' throw Error from \'FAKE\' action',() => {
+//     const startState:StateType = {
+//         collapsed:true
+//     };
+//     expect(()=>{
+//         reducer(startState, {type:'FAKE'})
+//     }).toThrowError();
+// });

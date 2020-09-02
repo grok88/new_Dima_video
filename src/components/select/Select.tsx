@@ -13,7 +13,7 @@ type SelectPropsType = {
     // selectTitle: (value: string) => void;
 }
 
-export const Select = (props: SelectPropsType) => {
+export const Select = React.memo((props: SelectPropsType) => {
     const {items, onChange, value} = props;
 
     const [active, setActive] = useState<boolean>(false);
@@ -74,7 +74,7 @@ export const Select = (props: SelectPropsType) => {
         </>
 
     );
-}
+});
 
 
 // export const Select = (props: SelectPropsType) => {

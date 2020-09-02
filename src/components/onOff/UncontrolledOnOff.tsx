@@ -5,7 +5,7 @@ type UncontrolledOnOffType = {
     onchange?: () => void
 }
 
-const UncontrolledOnOff = (props: UncontrolledOnOffType) => {
+const UncontrolledOnOff = React.memo((props: UncontrolledOnOffType) => {
     let [onOff, setOnOff] = useState<boolean>(props.on ? props.on : false);
 
     const block = {
@@ -43,13 +43,13 @@ const UncontrolledOnOff = (props: UncontrolledOnOffType) => {
         <div style={block}>
             <div style={onStyle} onClick={() => {
                 setOnOff(true);
-                props.onchange&&props.onchange();
+                props.onchange && props.onchange();
             }}>
                 On
             </div>
             <div style={offStyle} onClick={() => {
                 setOnOff(false);
-                props.onchange&&props.onchange();
+                props.onchange && props.onchange();
             }}>
                 Off
             </div>
@@ -57,5 +57,5 @@ const UncontrolledOnOff = (props: UncontrolledOnOffType) => {
             </div>
         </div>
     );
-}
+});
 export default UncontrolledOnOff;
