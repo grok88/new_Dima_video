@@ -2,11 +2,13 @@ import React, {useState, KeyboardEvent, useEffect} from "react";
 import styles from './Select.module.css';
 
 type ItemsType = {
-    title: string;
+    title?: string;
     value: string;
+    countryId?:number,
+    population?:number,
 }
 type SelectPropsType = {
-    items: ItemsType[];
+    items: ItemsType[] ;
     value?: string;
     onChange: (value: any) => void;
     // collapsed: boolean;
@@ -26,7 +28,7 @@ export const Select = React.memo((props: SelectPropsType) => {
         setHoveredItemValue(value);
     }, [value])
 
-    const title = selectedItem && selectedItem.title;
+    const title = selectedItem && selectedItem.title
 
     const toggleItems = () => setActive(!active);
     const onItemSelect = (value: string) => {
@@ -55,6 +57,7 @@ export const Select = React.memo((props: SelectPropsType) => {
         }
         console.log('keyUp')
     }
+    console.log('Select')
     return (
         <>
             <div className={styles.selectBlock} tabIndex={0} onKeyUp={onKeyUp}>
