@@ -1,0 +1,17 @@
+[33mf4816d8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m 18 - useCallback
+[33m04151b5[m 17 - useMemo
+[33ma9ecd49[m 16 - React.memo
+[33mdb522ee[m 15 - useReducer
+[33m0b2abbc[m Update - Big refactor own Select
+[33mac19daa[m 14 - Select
+[33m149e3de[m  add array of items to Accordion
+[33mb7b8959[m storybook - select,input,checkbox
+[33mbb159f4[m 12 - uncontrolled input
+[33mc1c3d2f[m 10 - storybook, fix some code
+[33mc2e4740[m 10 - storybook
+[33mc08f365[m lesson6-7  callbaks && uncontrolledComponents
+[33mbc83318[m lesson6 is done - useState()
+[33m665a070[m improve solution onOff
+[33m4e5ad57[m Lesson 5 is done
+[33m0aa4a89[m 4 video is done
+[33m65db64e[m Initialize project using Create React App
