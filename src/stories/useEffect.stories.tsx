@@ -63,7 +63,8 @@ export const SetTimeooutUseEffectExample = () => {
 
         setInterval(() => {
             console.log('tick : ' + count )
-            setCount(state => state + 1)
+            // setCount(count + 1)
+            // setCount(state => state + 1)
         }, 1000)
 
     }, []);
