@@ -111,7 +111,7 @@ export const HelpsToReactMemoSelect = () => {
 }
 
 
-export const likeUseCallback = () => {
+export const LikeUseCallback = () => {
     console.log('likeUseCallback');
     const [count, setCount] = useState<number>(0);
     const [books, setBooks] = useState<Array<string>>(['React', 'JS', 'HTML']);
