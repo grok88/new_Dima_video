@@ -2,7 +2,7 @@ import React, {useCallback, useMemo, useState} from "react";
 import {Select} from "../components/select/Select";
 
 export default {
-    title: 'useState demo'
+    title: 'Hooks demo/useState demo'
 }
 
 const generateDate = () => {

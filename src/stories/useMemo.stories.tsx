@@ -2,7 +2,7 @@ import React, {useCallback, useMemo, useState} from "react";
 import {Select} from "../components/select/Select";
 
 export default {
-    title: 'useMemo'
+    title: 'Hooks demo/useMemo'
 }
 
 export const Example1 = () => {

@@ -9,29 +9,41 @@ export type AccordionType = {
     title: string;
     collapsed: boolean;
     onClick: (value: boolean) => void;
+    /**
+     * Elements are showed when accordion is opened
+     */
     items: ItemsType[]
+    /**
+     * Callback that is called when item clicked
+     * @param value - is value of clicked item
+     */
     onItemClick: (value: number) => void;
+    /**
+     * Color of title Accordion
+     */
+    color?:string
 }
 
 export const Accordion = React.memo((props: AccordionType) => {
-    const {title, collapsed, onClick, items, onItemClick} = props;
+    const {title, collapsed, onClick, items, onItemClick,color} = props;
     return <div>
-        <AccordionTitle title={title} onClick={onClick} collapsed={collapsed}/>
+        <AccordionTitle title={title} onClick={onClick} collapsed={collapsed} color={color}/>
         {!collapsed && <AccordionBody items={items} onItemClick={onItemClick}/>}
     </div>
 });
 
 type AccordionTitleType = {
-    title: string,
-    onClick: (value: boolean) => void,
+    title: string
+    onClick: (value: boolean) => void
     collapsed: boolean
+    color?:string
 }
 
 const AccordionTitle = React.memo((props: AccordionTitleType) => {
-    const {title, onClick, collapsed} = props;
+    const {title, onClick, collapsed, color} = props;
 
     return (
-        <h3 onClick={() => onClick(!collapsed)}>{title}</h3>
+        <h3 onClick={() => onClick(!collapsed)} style={{ color:color ? color : 'black'}}>{title}</h3>
     );
 });
 
