@@ -5,7 +5,7 @@ type ItemsType = {
     value: number;
 }
 
-type AccordionType = {
+export type AccordionType = {
     title: string;
     collapsed: boolean;
     onClick: (value: boolean) => void;

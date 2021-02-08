@@ -8,7 +8,10 @@ export default {
 }
 
 const callback = action('collapsed or unCollapsed Accordion');
-const onItemClicked = action('some item with id  clicked');
+const onItemClicked = action('some item with id  clicked')
+
+
+
 
 const items = [
     {title:"Alex", value:1},
